@@ -1,0 +1,261 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: rgba(51, 51, 51, 0); /* Opasitas 0 membuat navbar benar-benar transparan */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.navbar a {
+  font-weight: 500;
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+}
+
+.navbar a:hover {
+  color: #382c19;
+  font-weight: bold;
+}
+
+.navbar-logo a {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+.button-transparan {
+  background-color: transparent;
+  border: 2px solid #694b3a; 
+  border-radius: 5px;
+  color: #694b3a; 
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-transparan:hover {
+  background-color: #694b3a; 
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.banner {
+  background-image: url('/assets/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 768px;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-top: -100px; /* Menggeser banner ke atas untuk menumpuk dengan navbar */
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#382c19;
+  text-align: center;
+}
+
+.banner .overlay h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner .overlay p {
+  font-size: 18px;
+}
+
+
+/* main */
+ 
+.profile header {
+  text-align: center;
+}
+ 
+.featured-image {
+  width: 100%;
+  max-height: 300px;
+ 
+  object-fit: cover;
+  object-position: center;
+}
+ 
+.profile img {
+  max-width: 200px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+ 
+  padding: 20px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+main {
+  padding: 20px;
+ 
+  display: flex;
+  gap: 1.5rem;
+}
+ 
+#content {
+  flex: 5;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
+}
+ 
+aside {
+  flex: 1;
+}
+ 
+header {
+  display: inline;
+}
+ 
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+ 
+  main aside {
+    align-self: center;
+  }
+}
+ 
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+ 
+  main aside {
+    align-self: stretch;
+  }
+}
+
+.biodata {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  width: 30%;
+}
+
+
+/* footer */
+footer {
+  padding: 20px;
+  color: white;
+  background-color:  #a3765a;
+ 
+  text-align: center;
+  font-weight: bold;
+}
+
+
+.sosmed-icons
+{
+  display: flex;
+  justify-content: center;
+}
+
+.sosmed-icons a
+{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.sosmed-icons i
+{
+    font-size: 26px;
+    color: #a3765a;
+}
+
+.sosmed-icons a:hover
+{
+    background-color: #e6b496;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
